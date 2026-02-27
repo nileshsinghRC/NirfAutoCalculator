@@ -14,7 +14,6 @@ header p { font-size: 13px; opacity: 0.8; margin-top: 4px; }
 
 .container { max-width: 820px; margin: 0 auto; padding: 0 16px; }
 
-/* FINAL SCORE */
 .score-card {
   background: #fff; border-radius: 16px; padding: 28px;
   margin-top: 24px; margin-bottom: 24px;
@@ -30,71 +29,72 @@ header p { font-size: 13px; opacity: 0.8; margin-top: 4px; }
 .bar-fill { height: 100%; border-radius: 99px; transition: width 0.4s; }
 .bar-val { width: 40px; text-align: right; font-size: 12px; font-weight: 700; }
 
-/* ACCORDION */
 .section { background: #fff; border: 1.5px solid #e5e7eb; border-radius: 12px; overflow: hidden; margin-bottom: 16px; }
-.section-header {
+.sec-hdr {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 16px 20px; cursor: pointer; background: #fff;
-  border-bottom: none; transition: background 0.2s;
+  padding: 16px 20px; cursor: pointer; background: #fff; transition: background 0.2s;
 }
-.section-header.open { background: #f0faf8; border-bottom: 1px solid #e5e7eb; }
-.section-header:hover { background: #f9fafb; }
-.section-dot { width: 10px; height: 10px; border-radius: 50%; margin-right: 12px; flex-shrink: 0; }
-.section-title-text { font-weight: 700; font-size: 15px; color: #111827; }
-.section-meta { font-size: 11px; color: #9ca3af; }
-.section-score-val { font-weight: 800; font-size: 20px; }
-.section-score-sub { font-size: 11px; color: #9ca3af; }
-.section-arrow { font-size: 18px; color: #9ca3af; transition: transform 0.2s; }
-.section-body { padding: 20px 24px; display: none; }
-.section-body.open { display: block; }
+.sec-hdr:hover { background: #f9fafb; }
+.sec-hdr.open { background: #f0faf8; border-bottom: 1px solid #e5e7eb; }
+.sec-dot { width: 10px; height: 10px; border-radius: 50%; margin-right: 12px; flex-shrink: 0; }
+.sec-title { font-weight: 700; font-size: 15px; color: #111827; }
+.sec-meta { font-size: 11px; color: #9ca3af; }
+.sec-score { font-weight: 800; font-size: 20px; }
+.sec-sub { font-size: 11px; color: #9ca3af; }
+.sec-arrow { font-size: 18px; color: #9ca3af; transition: transform 0.2s; display: inline-block; }
+.sec-body { padding: 20px 24px; display: none; }
+.sec-body.open { display: block; }
 
-/* GRID */
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .span2 { grid-column: span 2; }
 
-/* FIELDS */
 .field { margin-bottom: 14px; }
 .field label { display: block; font-size: 13px; font-weight: 600; color: #374151; margin-bottom: 4px; }
-.field-hint { font-size: 11px; color: #9ca3af; margin-bottom: 6px; line-height: 1.4; }
+.hint { font-size: 11px; color: #9ca3af; margin-bottom: 6px; line-height: 1.4; }
 .field-row { display: flex; align-items: center; gap: 6px; }
 .field input {
   width: 100%; padding: 8px 12px; border: 1.5px solid #e5e7eb;
   border-radius: 7px; font-size: 14px; font-family: inherit;
-  background: #f9fafb; color: #111827; outline: none;
-  transition: border-color 0.2s;
+  background: #f9fafb; color: #111827; outline: none; transition: border-color 0.2s;
 }
-.field input:focus { border-color: #0d7c6e; }
-.field-unit { font-size: 12px; color: #6b7280; white-space: nowrap; }
+.field input:focus { border-color: #0d7c6e; background: #fff; }
+.unit { font-size: 12px; color: #6b7280; white-space: nowrap; }
 
-/* SUB SCORE */
 .subscore { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px 14px; margin-bottom: 8px; }
-.subscore-header { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13px; font-weight: 600; color: #374151; }
-.subscore-bar-track { flex: 1; height: 6px; background: #e5e7eb; border-radius: 99px; overflow: hidden; }
-.subscore-bar-fill { height: 100%; border-radius: 99px; transition: width 0.4s; }
+.ss-hdr { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 13px; font-weight: 600; color: #374151; }
+.ss-track { height: 6px; background: #e5e7eb; border-radius: 99px; overflow: hidden; }
+.ss-fill { height: 100%; border-radius: 99px; transition: width 0.4s; }
 
-/* SUBSECTION TITLE */
-.subsec-title { font-weight: 700; font-size: 13px; color: #374151; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid #e5e7eb; }
+.subsec { font-weight: 700; font-size: 13px; color: #374151; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid #e5e7eb; }
 
-/* TOTALS */
-.total-bar { margin-top: 16px; padding: 14px 16px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
-.total-label { font-weight: 700; }
+.total-row { display: flex; align-items: center; margin-top: 16px; gap: 12px; }
+.total-bar { flex: 1; padding: 14px 16px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
+.total-label { font-weight: 700; font-size: 14px; }
 .total-val { font-weight: 900; font-size: 18px; }
 
-/* SUMMARY TABLE */
+.reset-btn {
+  padding: 10px 16px; flex-shrink: 0;
+  background: #fff; border: 1.5px solid #e5e7eb; border-radius: 7px;
+  font-size: 12px; font-weight: 600; color: #6b7280; cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s; white-space: nowrap;
+}
+.reset-btn:hover { background: #fee2e2; border-color: #f87171; color: #b91c1c; }
+
 .summary { background: #fff; border-radius: 12px; border: 1.5px solid #e5e7eb; overflow: hidden; margin-top: 8px; }
-.summary-head { padding: 14px 20px; background: #111827; color: #fff; font-weight: 700; font-size: 14px; }
+.sum-head { padding: 14px 20px; background: #111827; color: #fff; font-weight: 700; font-size: 14px; }
 table { width: 100%; border-collapse: collapse; font-size: 13px; }
 th { padding: 10px 16px; text-align: left; font-weight: 600; color: #6b7280; border-bottom: 1px solid #e5e7eb; background: #f9fafb; }
-td { padding: 10px 16px; border-bottom: 1px solid #f3f4f6; }
+td { padding: 10px 16px; border-bottom: 1px solid #f3f4f6; color: #374151; }
 tr:nth-child(even) td { background: #f9fafb; }
-.summary-footer td { background: #111827 !important; color: #fff; font-weight: 800; padding: 12px 16px; }
+tr.foot td { background: #111827 !important; color: #fff; font-weight: 800; padding: 12px 16px; }
 
-.footer-note { text-align: center; font-size: 11px; color: #9ca3af; margin-top: 20px; }
+.footer-note { text-align: center; font-size: 11px; color: #9ca3af; margin-top: 20px; line-height: 1.6; }
 
 @media (max-width: 600px) {
   .grid2 { grid-template-columns: 1fr; }
   .span2 { grid-column: span 1; }
   .score-card { flex-direction: column; }
+  .total-row { flex-direction: column; align-items: stretch; }
 }
 </style>
 </head>
@@ -102,7 +102,7 @@ tr:nth-child(even) td { background: #f9fafb; }
 
 <header>
   <div class="container">
-    <h1>NIRF 2025 — Architecture & Planning</h1>
+    <h1>NIRF 2025 — Architecture &amp; Planning</h1>
     <p>Automated Ranking Score Calculator by Nilesh Singh</p>
   </div>
 </header>
@@ -117,312 +117,545 @@ tr:nth-child(even) td { background: #f9fafb; }
       <div class="score-sub">out of 100.00</div>
     </div>
     <div style="flex:1;min-width:220px">
-      <div class="bar-row"><div class="bar-name">TLR (×0.40)</div><div class="bar-track"><div class="bar-fill" id="bar-tlr" style="background:#0d7c6e;width:0%"></div></div><div class="bar-val" id="bv-tlr" style="color:#0d7c6e">0.0</div></div>
-      <div class="bar-row"><div class="bar-name">RP  (×0.20)</div><div class="bar-track"><div class="bar-fill" id="bar-rp"  style="background:#2563eb;width:0%"></div></div><div class="bar-val" id="bv-rp"  style="color:#2563eb">0.0</div></div>
-      <div class="bar-row"><div class="bar-name">GO  (×0.20)</div><div class="bar-track"><div class="bar-fill" id="bar-go"  style="background:#7c3aed;width:0%"></div></div><div class="bar-val" id="bv-go"  style="color:#7c3aed">0.0</div></div>
-      <div class="bar-row"><div class="bar-name">OI  (×0.10)</div><div class="bar-track"><div class="bar-fill" id="bar-oi"  style="background:#c47b1a;width:0%"></div></div><div class="bar-val" id="bv-oi"  style="color:#c47b1a">0.0</div></div>
-      <div class="bar-row"><div class="bar-name">PR  (×0.10)</div><div class="bar-track"><div class="bar-fill" id="bar-pr"  style="background:#b5354a;width:0%"></div></div><div class="bar-val" id="bv-pr"  style="color:#b5354a">0.0</div></div>
+      <div class="bar-row"><span class="bar-name">TLR (×0.40)</span><div class="bar-track"><div class="bar-fill" id="bar-tlr" style="background:#0d7c6e;width:0%"></div></div><span class="bar-val" id="bv-tlr" style="color:#0d7c6e">0.0</span></div>
+      <div class="bar-row"><span class="bar-name">RP  (×0.20)</span><div class="bar-track"><div class="bar-fill" id="bar-rp"  style="background:#2563eb;width:0%"></div></div><span class="bar-val" id="bv-rp"  style="color:#2563eb">0.0</span></div>
+      <div class="bar-row"><span class="bar-name">GO  (×0.20)</span><div class="bar-track"><div class="bar-fill" id="bar-go"  style="background:#7c3aed;width:0%"></div></div><span class="bar-val" id="bv-go"  style="color:#7c3aed">0.0</span></div>
+      <div class="bar-row"><span class="bar-name">OI  (×0.10)</span><div class="bar-track"><div class="bar-fill" id="bar-oi"  style="background:#c47b1a;width:0%"></div></div><span class="bar-val" id="bv-oi"  style="color:#c47b1a">0.0</span></div>
+      <div class="bar-row"><span class="bar-name">PR  (×0.10)</span><div class="bar-track"><div class="bar-fill" id="bar-pr"  style="background:#b5354a;width:0%"></div></div><span class="bar-val" id="bv-pr"  style="color:#b5354a">0.0</span></div>
     </div>
   </div>
 
-  <!-- 1. TLR -->
+  <!-- ── 1. TLR ── -->
   <div class="section">
-    <div class="section-header" onclick="toggle('tlr')">
+    <div class="sec-hdr" id="hdr-tlr" onclick="toggle('tlr')">
       <div style="display:flex;align-items:center">
-        <div class="section-dot" style="background:#0d7c6e"></div>
-        <div><div class="section-title-text">1. Teaching, Learning &amp; Resources (TLR)</div><div class="section-meta">Weight: 40% · Max 100 pts</div></div>
+        <div class="sec-dot" style="background:#0d7c6e"></div>
+        <div>
+          <div class="sec-title">1. Teaching, Learning &amp; Resources (TLR)</div>
+          <div class="sec-meta">Weight: 40% · Max 100 pts</div>
+        </div>
       </div>
       <div style="display:flex;align-items:center;gap:16px">
-        <div style="text-align:right"><div class="section-score-val" id="tlr-total" style="color:#0d7c6e">0.0</div><div class="section-score-sub">/ 100</div></div>
-        <div class="section-arrow" id="arr-tlr">›</div>
+        <div style="text-align:right">
+          <div class="sec-score" id="tlr-hdr-val" style="color:#0d7c6e">0.0</div>
+          <div class="sec-sub">/ 100</div>
+        </div>
+        <span class="sec-arrow" id="arr-tlr">›</span>
       </div>
     </div>
-    <div class="section-body" id="body-tlr">
+    <div class="sec-body" id="body-tlr">
       <div class="grid2">
         <div>
-          <div class="subsec-title">A. Student Strength (SS) · 20 pts</div>
-          <div class="field"><label>Sanctioned Intake (NT)</label><div class="field-hint">Total approved intake across all UG &amp; PG programs</div><input type="number" id="NT" oninput="calc()" min="0"></div>
-          <div class="field"><label>Enrolled Students (NE)</label><div class="field-hint">Total students enrolled in all UG &amp; PG programs</div><input type="number" id="NE" oninput="calc()" min="0"></div>
-          <div class="subscore"><div class="subscore-header"><span>SS Score</span><span id="ss-val" style="color:#0d7c6e">0.00 / 20</span></div><div style="display:flex;align-items:center;gap:10px"><div class="subscore-bar-track"><div class="subscore-bar-fill" id="ss-bar" style="background:#0d7c6e;width:0%"></div></div></div></div>
+          <div class="subsec">A. Student Strength (SS) · 20 pts</div>
+          <div class="field">
+            <label>Sanctioned Intake (NT)</label>
+            <div class="hint">Total approved intake across all UG &amp; PG programs</div>
+            <input type="number" id="NT" oninput="calc()" min="0" placeholder="e.g. 480">
+          </div>
+          <div class="field">
+            <label>Enrolled Students (NE)</label>
+            <div class="hint">Total students enrolled in all UG &amp; PG programs</div>
+            <input type="number" id="NE" oninput="calc()" min="0" placeholder="e.g. 450">
+          </div>
+          <div class="subscore">
+            <div class="ss-hdr"><span>SS Score</span><span id="ss-val" style="color:#0d7c6e">0.00 / 20</span></div>
+            <div class="ss-track"><div class="ss-fill" id="ss-bar" style="background:#0d7c6e;width:0%"></div></div>
+          </div>
         </div>
         <div>
-          <div class="subsec-title">B. Faculty–Student Ratio (FSR) · 30 pts</div>
-          <div class="field"><label>Full-time Regular Faculty (F)</label><div class="field-hint">Faculty who taught in both semesters of AY 2023-24</div><input type="number" id="F" oninput="calc()" min="0"></div>
-          <div style="font-size:11px;color:#9ca3af;margin-bottom:10px">N = NT. Expected ratio 1:15 for full marks. Zero if &lt; 1:50.</div>
-          <div class="subscore"><div class="subscore-header"><span>FSR Score</span><span id="fsr-val" style="color:#0d7c6e">0.00 / 30</span></div><div style="display:flex;align-items:center;gap:10px"><div class="subscore-bar-track"><div class="subscore-bar-fill" id="fsr-bar" style="background:#0d7c6e;width:0%"></div></div></div></div>
+          <div class="subsec">B. Faculty–Student Ratio (FSR) · 30 pts</div>
+          <div class="field">
+            <label>Full-time Regular Faculty (F)</label>
+            <div class="hint">Faculty who taught in both semesters of AY 2023-24</div>
+            <input type="number" id="F" oninput="calc()" min="0" placeholder="e.g. 32">
+          </div>
+          <div class="hint" style="margin-bottom:10px">N = NT. Expected ratio 1:15 for full marks. Zero if &lt; 1:50.</div>
+          <div class="subscore">
+            <div class="ss-hdr"><span>FSR Score</span><span id="fsr-val" style="color:#0d7c6e">0.00 / 30</span></div>
+            <div class="ss-track"><div class="ss-fill" id="fsr-bar" style="background:#0d7c6e;width:0%"></div></div>
+          </div>
         </div>
         <div>
-          <div class="subsec-title">C. Faculty Quality &amp; Experience (FQE) · 20 pts</div>
-          <div class="field"><label>% Faculty with PhD / Equivalent (FRA)</label><div class="field-hint">% w.r.t. required or actual faculty, whichever is higher</div><div class="field-row"><input type="number" id="FRA" oninput="calc()" min="0" max="100"><span class="field-unit">%</span></div></div>
-          <div class="field"><label>% Faculty: Experience ≤ 8 yrs (F1)</label><div class="field-row"><input type="number" id="F1" oninput="calc()" min="0" max="100"><span class="field-unit">%</span></div></div>
-          <div class="field"><label>% Faculty: Experience 8–15 yrs (F2)</label><div class="field-row"><input type="number" id="F2" oninput="calc()" min="0" max="100"><span class="field-unit">%</span></div></div>
-          <div class="field"><label>% Faculty: Experience &gt; 15 yrs (F3)</label><div class="field-row"><input type="number" id="F3" oninput="calc()" min="0" max="100"><span class="field-unit">%</span></div></div>
-          <div class="subscore"><div class="subscore-header"><span>FQE Score</span><span id="fqe-val" style="color:#0d7c6e">0.00 / 20</span></div><div style="display:flex;align-items:center;gap:10px"><div class="subscore-bar-track"><div class="subscore-bar-fill" id="fqe-bar" style="background:#0d7c6e;width:0%"></div></div></div></div>
+          <div class="subsec">C. Faculty Quality &amp; Experience (FQE) · 20 pts</div>
+          <div class="field">
+            <label>% Faculty with PhD / Equivalent (FRA)</label>
+            <div class="hint">% w.r.t. required or actual faculty, whichever is higher</div>
+            <div class="field-row"><input type="number" id="FRA" oninput="calc()" min="0" max="100" placeholder="e.g. 80"><span class="unit">%</span></div>
+          </div>
+          <div class="field">
+            <label>% Faculty: Experience ≤ 8 yrs (F1)</label>
+            <div class="field-row"><input type="number" id="expF1" oninput="calc()" min="0" max="100" placeholder="e.g. 33"><span class="unit">%</span></div>
+          </div>
+          <div class="field">
+            <label>% Faculty: Experience 8–15 yrs (F2)</label>
+            <div class="field-row"><input type="number" id="expF2" oninput="calc()" min="0" max="100" placeholder="e.g. 33"><span class="unit">%</span></div>
+          </div>
+          <div class="field">
+            <label>% Faculty: Experience &gt; 15 yrs (F3)</label>
+            <div class="field-row"><input type="number" id="expF3" oninput="calc()" min="0" max="100" placeholder="e.g. 34"><span class="unit">%</span></div>
+          </div>
+          <div class="subscore">
+            <div class="ss-hdr"><span>FQE Score</span><span id="fqe-val" style="color:#0d7c6e">0.00 / 20</span></div>
+            <div class="ss-track"><div class="ss-fill" id="fqe-bar" style="background:#0d7c6e;width:0%"></div></div>
+          </div>
         </div>
         <div>
-          <div class="subsec-title">D. Financial Resources &amp; Utilisation (FRU) · 30 pts</div>
-          <div class="field"><label>Avg Annual Capital Expenditure / Student (BC)</label><div class="field-hint">Previous 3 years, Architecture discipline only. Excl. new buildings.</div><div class="field-row"><input type="number" id="BC" oninput="calc()" min="0"><span class="field-unit">₹</span></div></div>
-          <div class="field"><label>Avg Annual Operational Expenditure / Student (BO)</label><div class="field-hint">Previous 3 years. Excl. hostel maintenance.</div><div class="field-row"><input type="number" id="BO" oninput="calc()" min="0"><span class="field-unit">₹</span></div></div>
-          <div class="subscore"><div class="subscore-header"><span>FRU Score</span><span id="fru-val" style="color:#0d7c6e">0.00 / 30</span></div><div style="display:flex;align-items:center;gap:10px"><div class="subscore-bar-track"><div class="subscore-bar-fill" id="fru-bar" style="background:#0d7c6e;width:0%"></div></div></div></div>
+          <div class="subsec">D. Financial Resources &amp; Utilisation (FRU) · 30 pts</div>
+          <div class="field">
+            <label>Avg Annual Capital Expenditure / Student (BC)</label>
+            <div class="hint">Previous 3 years, Architecture discipline only. Excl. new buildings.</div>
+            <div class="field-row"><input type="number" id="BC" oninput="calc()" min="0" placeholder="e.g. 30000"><span class="unit">₹</span></div>
+          </div>
+          <div class="field">
+            <label>Avg Annual Operational Expenditure / Student (BO)</label>
+            <div class="hint">Previous 3 years. Excl. hostel maintenance.</div>
+            <div class="field-row"><input type="number" id="BO" oninput="calc()" min="0" placeholder="e.g. 80000"><span class="unit">₹</span></div>
+          </div>
+          <div class="subscore">
+            <div class="ss-hdr"><span>FRU Score</span><span id="fru-val" style="color:#0d7c6e">0.00 / 30</span></div>
+            <div class="ss-track"><div class="ss-fill" id="fru-bar" style="background:#0d7c6e;width:0%"></div></div>
+          </div>
         </div>
       </div>
-      <div class="total-bar" style="background:#f0faf8;border:1px solid #c8ece8"><span class="total-label" style="color:#0d7c6e">TLR Total</span><span class="total-val" id="tlr-total2" style="color:#0d7c6e">0.00 / 100</span></div>
+      <div class="total-row">
+        <div class="total-bar" style="background:#f0faf8;border:1px solid #c8ece8">
+          <span class="total-label" style="color:#0d7c6e">TLR Total</span>
+          <span class="total-val" id="tlr-total" style="color:#0d7c6e">0.00 / 100</span>
+        </div>
+        <button class="reset-btn" onclick="resetSection(['NT','NE','F','FRA','expF1','expF2','expF3','BC','BO'])">↺ Reset TLR</button>
+      </div>
     </div>
   </div>
 
-  <!-- 2. RP -->
+  <!-- ── 2. RP ── -->
   <div class="section">
-    <div class="section-header" onclick="toggle('rp')">
+    <div class="sec-hdr" id="hdr-rp" onclick="toggle('rp')">
       <div style="display:flex;align-items:center">
-        <div class="section-dot" style="background:#2563eb"></div>
-        <div><div class="section-title-text">2. Research and Professional Practice (RP)</div><div class="section-meta">Weight: 20% · Max 100 pts</div></div>
+        <div class="sec-dot" style="background:#2563eb"></div>
+        <div>
+          <div class="sec-title">2. Research and Professional Practice (RP)</div>
+          <div class="sec-meta">Weight: 20% · Max 100 pts</div>
+        </div>
       </div>
       <div style="display:flex;align-items:center;gap:16px">
-        <div style="text-align:right"><div class="section-score-val" id="rp-total" style="color:#2563eb">0.0</div><div class="section-score-sub">/ 100</div></div>
-        <div class="section-arrow" id="arr-rp">›</div>
+        <div style="text-align:right">
+          <div class="sec-score" id="rp-hdr-val" style="color:#2563eb">0.0</div>
+          <div class="sec-sub">/ 100</div>
+        </div>
+        <span class="sec-arrow" id="arr-rp">›</span>
       </div>
     </div>
-    <div class="section-body" id="body-rp">
+    <div class="sec-body" id="body-rp">
       <div class="grid2">
         <div>
-          <div class="subsec-title">A. Publications (PU) · 60 pts</div>
-          <div class="field"><label>Weighted Publications (P)</label><div class="field-hint">From third-party sources (Scopus / WoS)</div><input type="number" id="P" oninput="calc()" min="0"></div>
-          <div class="field"><label>Required Faculty Equivalent (FRQ)</label><div class="field-hint">Max of: required faculty at 1:15 FSR or actual faculty</div><input type="number" id="FRQ" oninput="calc()" min="0"></div>
-          <div class="subscore"><div class="subscore-header"><span>PU Score</span><span id="pu-val" style="color:#2563eb">0.00 / 60</span></div><div style="display:flex;align-items:center;gap:10px"><div class="subscore-bar-track"><div class="subscore-bar-fill" id="pu-bar" style="background:#2563eb;width:0%"></div></div></div></div>
+          <div class="subsec">A. Publications (PU) · 60 pts</div>
+          <div class="field">
+            <label>Weighted Publications (P)</label>
+            <div class="hint">From third-party sources (Scopus / WoS)</div>
+            <input type="number" id="P" oninput="calc()" min="0" placeholder="e.g. 50">
+          </div>
+          <div class="field">
+            <label>Required Faculty Equivalent (FRQ)</label>
+            <div class="hint">Max of: required faculty at 1:15 FSR or actual faculty</div>
+            <input type="number" id="FRQ" oninput="calc()" min="0" placeholder="e.g. 32">
+          </div>
+          <div class="subscore">
+            <div class="ss-hdr"><span>PU Score</span><span id="pu-val" style="color:#2563eb">0.00 / 60</span></div>
+            <div class="ss-track"><div class="ss-fill" id="pu-bar" style="background:#2563eb;width:0%"></div></div>
+          </div>
         </div>
         <div>
-          <div class="subsec-title">B. Quality of Publications (QP) · 20 pts</div>
-          <div class="field"><label>Total Citation Count over 3 years (CC)</label><div class="field-hint">From third-party sources</div><input type="number" id="CC" oninput="calc()" min="0"></div>
-          <div style="font-size:11px;color:#9ca3af;margin-bottom:10px">P (publications) carried over from above.</div>
-          <div class="subscore"><div class="subscore-header"><span>QP Score</span><span id="qp-val" style="color:#2563eb">0.00 / 20</span></div><div style="display:flex;align-items:center;gap:10px"><div class="subscore-bar-track"><div class="subscore-bar-fill" id="qp-bar" style="background:#2563eb;width:0%"></div></div></div></div>
+          <div class="subsec">B. Quality of Publications (QP) · 20 pts</div>
+          <div class="field">
+            <label>Total Citation Count over 3 years (CC)</label>
+            <div class="hint">From third-party sources</div>
+            <input type="number" id="CC" oninput="calc()" min="0" placeholder="e.g. 200">
+          </div>
+          <div class="hint" style="margin-bottom:10px">P (publications) carried over from above.</div>
+          <div class="subscore">
+            <div class="ss-hdr"><span>QP Score</span><span id="qp-val" style="color:#2563eb">0.00 / 20</span></div>
+            <div class="ss-track"><div class="ss-fill" id="qp-bar" style="background:#2563eb;width:0%"></div></div>
+          </div>
         </div>
         <div class="span2">
-          <div class="subsec-title">C. Footprint of Projects &amp; Professional Practice (FPPP) · 20 pts</div>
+          <div class="subsec">C. Footprint of Projects &amp; Professional Practice (FPPP) · 20 pts</div>
           <div class="grid2">
-            <div class="field"><label>Avg Annual Research Funding / Faculty (RF)</label><div class="field-hint">Amount actually received (₹), avg over 3 years</div><div class="field-row"><input type="number" id="RF" oninput="calc()" min="0"><span class="field-unit">₹</span></div></div>
-            <div class="field"><label>Avg Annual Consultancy Amount / Faculty (CF)</label><div class="field-hint">Amount actually received (₹), avg over 3 years</div><div class="field-row"><input type="number" id="CF" oninput="calc()" min="0"><span class="field-unit">₹</span></div></div>
+            <div class="field">
+              <label>Avg Annual Research Funding / Faculty (RF)</label>
+              <div class="hint">Amount actually received (₹), avg over 3 years</div>
+              <div class="field-row"><input type="number" id="RF" oninput="calc()" min="0" placeholder="e.g. 200000"><span class="unit">₹</span></div>
+            </div>
+            <div class="field">
+              <label>Avg Annual Consultancy Amount / Faculty (CF)</label>
+              <div class="hint">Amount actually received (₹), avg over 3 years</div>
+              <div class="field-row"><input type="number" id="CF" oninput="calc()" min="0" placeholder="e.g. 150000"><span class="unit">₹</span></div>
+            </div>
           </div>
-          <div class="subscore"><div class="subscore-header"><span>FPPP Score</span><span id="fppp-val" style="color:#2563eb">0.00 / 20</span></div><div style="display:flex;align-items:center;gap:10px"><div class="subscore-bar-track"><div class="subscore-bar-fill" id="fppp-bar" style="background:#2563eb;width:0%"></div></div></div></div>
+          <div class="subscore">
+            <div class="ss-hdr"><span>FPPP Score</span><span id="fppp-val" style="color:#2563eb">0.00 / 20</span></div>
+            <div class="ss-track"><div class="ss-fill" id="fppp-bar" style="background:#2563eb;width:0%"></div></div>
+          </div>
         </div>
       </div>
-      <div class="total-bar" style="background:#eff6ff;border:1px solid #bfdbfe"><span class="total-label" style="color:#2563eb">RP Total</span><span class="total-val" id="rp-total2" style="color:#2563eb">0.00 / 100</span></div>
+      <div class="total-row">
+        <div class="total-bar" style="background:#eff6ff;border:1px solid #bfdbfe">
+          <span class="total-label" style="color:#2563eb">RP Total</span>
+          <span class="total-val" id="rp-total" style="color:#2563eb">0.00 / 100</span>
+        </div>
+        <button class="reset-btn" onclick="resetSection(['P','FRQ','CC','RF','CF'])">↺ Reset RP</button>
+      </div>
     </div>
   </div>
 
-  <!-- 3. GO -->
+  <!-- ── 3. GO ── -->
   <div class="section">
-    <div class="section-header" onclick="toggle('go')">
+    <div class="sec-hdr" id="hdr-go" onclick="toggle('go')">
       <div style="display:flex;align-items:center">
-        <div class="section-dot" style="background:#7c3aed"></div>
-        <div><div class="section-title-text">3. Graduation Outcomes (GO)</div><div class="section-meta">Weight: 20% · Max 100 pts</div></div>
+        <div class="sec-dot" style="background:#7c3aed"></div>
+        <div>
+          <div class="sec-title">3. Graduation Outcomes (GO)</div>
+          <div class="sec-meta">Weight: 20% · Max 100 pts</div>
+        </div>
       </div>
       <div style="display:flex;align-items:center;gap:16px">
-        <div style="text-align:right"><div class="section-score-val" id="go-total" style="color:#7c3aed">0.0</div><div class="section-score-sub">/ 100</div></div>
-        <div class="section-arrow" id="arr-go">›</div>
+        <div style="text-align:right">
+          <div class="sec-score" id="go-hdr-val" style="color:#7c3aed">0.0</div>
+          <div class="sec-sub">/ 100</div>
+        </div>
+        <span class="sec-arrow" id="arr-go">›</span>
       </div>
     </div>
-    <div class="section-body" id="body-go">
+    <div class="sec-body" id="body-go">
       <div class="grid2">
         <div>
-          <div class="subsec-title">A. Placement &amp; Higher Studies (GPH) · 40 pts</div>
-          <div class="field"><label>% Graduates Placed (Np)</label><div class="field-hint">UG/PG, averaged over previous 3 years</div><div class="field-row"><input type="number" id="Np" oninput="calc()" min="0" max="100"><span class="field-unit">%</span></div></div>
-          <div class="field"><label>% Selected for Higher Studies (Nhs)</label><div class="field-hint">UG/PG, averaged over previous 3 years</div><div class="field-row"><input type="number" id="Nhs" oninput="calc()" min="0" max="100"><span class="field-unit">%</span></div></div>
-          <div class="subscore"><div class="subscore-header"><span>GPH Score</span><span id="gph-val" style="color:#7c3aed">0.00 / 40</span></div><div style="display:flex;align-items:center;gap:10px"><div class="subscore-bar-track"><div class="subscore-bar-fill" id="gph-bar" style="background:#7c3aed;width:0%"></div></div></div></div>
+          <div class="subsec">A. Placement &amp; Higher Studies (GPH) · 40 pts</div>
+          <div class="field">
+            <label>% Graduates Placed (Np)</label>
+            <div class="hint">UG/PG, averaged over previous 3 years</div>
+            <div class="field-row"><input type="number" id="Np" oninput="calc()" min="0" max="100" placeholder="e.g. 70"><span class="unit">%</span></div>
+          </div>
+          <div class="field">
+            <label>% Selected for Higher Studies (Nhs)</label>
+            <div class="hint">UG/PG, averaged over previous 3 years</div>
+            <div class="field-row"><input type="number" id="Nhs" oninput="calc()" min="0" max="100" placeholder="e.g. 15"><span class="unit">%</span></div>
+          </div>
+          <div class="subscore">
+            <div class="ss-hdr"><span>GPH Score</span><span id="gph-val" style="color:#7c3aed">0.00 / 40</span></div>
+            <div class="ss-track"><div class="ss-fill" id="gph-bar" style="background:#7c3aed;width:0%"></div></div>
+          </div>
         </div>
         <div>
-          <div class="subsec-title">B. University Examinations (GUE) · 30 pts</div>
-          <div class="field"><label>% Students Passing in Stipulated Time (Ng)</label><div class="field-hint">As fraction of approved intake, avg over 3 years. Max = 80% for full marks.</div><div class="field-row"><input type="number" id="Ng" oninput="calc()" min="0" max="100"><span class="field-unit">%</span></div></div>
-          <div class="subscore"><div class="subscore-header"><span>GUE Score</span><span id="gue-val" style="color:#7c3aed">0.00 / 30</span></div><div style="display:flex;align-items:center;gap:10px"><div class="subscore-bar-track"><div class="subscore-bar-fill" id="gue-bar" style="background:#7c3aed;width:0%"></div></div></div></div>
+          <div class="subsec">B. University Examinations (GUE) · 30 pts</div>
+          <div class="field">
+            <label>% Students Passing in Stipulated Time (Ng)</label>
+            <div class="hint">Avg over 3 years as fraction of approved intake. 80% = full marks.</div>
+            <div class="field-row"><input type="number" id="Ng" oninput="calc()" min="0" max="100" placeholder="e.g. 75"><span class="unit">%</span></div>
+          </div>
+          <div class="subscore">
+            <div class="ss-hdr"><span>GUE Score</span><span id="gue-val" style="color:#7c3aed">0.00 / 30</span></div>
+            <div class="ss-track"><div class="ss-fill" id="gue-bar" style="background:#7c3aed;width:0%"></div></div>
+          </div>
           <div style="margin-top:16px">
-            <div class="subsec-title">C. Median Salary (GMS) · 30 pts</div>
-            <div class="field"><label>Median Salary of Graduates (MS)</label><div class="field-hint">UG/PG, averaged over previous 3 years (₹)</div><div class="field-row"><input type="number" id="MS" oninput="calc()" min="0"><span class="field-unit">₹</span></div></div>
-            <div class="subscore"><div class="subscore-header"><span>GMS Score</span><span id="gms-val" style="color:#7c3aed">0.00 / 30</span></div><div style="display:flex;align-items:center;gap:10px"><div class="subscore-bar-track"><div class="subscore-bar-fill" id="gms-bar" style="background:#7c3aed;width:0%"></div></div></div></div>
+            <div class="subsec">C. Median Salary (GMS) · 30 pts</div>
+            <div class="field">
+              <label>Median Salary of Graduates (MS)</label>
+              <div class="hint">UG/PG, averaged over previous 3 years (₹)</div>
+              <div class="field-row"><input type="number" id="MS" oninput="calc()" min="0" placeholder="e.g. 500000"><span class="unit">₹</span></div>
+            </div>
+            <div class="subscore">
+              <div class="ss-hdr"><span>GMS Score</span><span id="gms-val" style="color:#7c3aed">0.00 / 30</span></div>
+              <div class="ss-track"><div class="ss-fill" id="gms-bar" style="background:#7c3aed;width:0%"></div></div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="total-bar" style="background:#f5f3ff;border:1px solid #ddd6fe"><span class="total-label" style="color:#7c3aed">GO Total</span><span class="total-val" id="go-total2" style="color:#7c3aed">0.00 / 100</span></div>
+      <div class="total-row">
+        <div class="total-bar" style="background:#f5f3ff;border:1px solid #ddd6fe">
+          <span class="total-label" style="color:#7c3aed">GO Total</span>
+          <span class="total-val" id="go-total" style="color:#7c3aed">0.00 / 100</span>
+        </div>
+        <button class="reset-btn" onclick="resetSection(['Np','Nhs','Ng','MS'])">↺ Reset GO</button>
+      </div>
     </div>
   </div>
 
-  <!-- 4. OI -->
+  <!-- ── 4. OI ── -->
   <div class="section">
-    <div class="section-header" onclick="toggle('oi')">
+    <div class="sec-hdr" id="hdr-oi" onclick="toggle('oi')">
       <div style="display:flex;align-items:center">
-        <div class="section-dot" style="background:#c47b1a"></div>
-        <div><div class="section-title-text">4. Outreach and Inclusivity (OI)</div><div class="section-meta">Weight: 10% · Max 100 pts</div></div>
+        <div class="sec-dot" style="background:#c47b1a"></div>
+        <div>
+          <div class="sec-title">4. Outreach and Inclusivity (OI)</div>
+          <div class="sec-meta">Weight: 10% · Max 100 pts</div>
+        </div>
       </div>
       <div style="display:flex;align-items:center;gap:16px">
-        <div style="text-align:right"><div class="section-score-val" id="oi-total" style="color:#c47b1a">0.0</div><div class="section-score-sub">/ 100</div></div>
-        <div class="section-arrow" id="arr-oi">›</div>
+        <div style="text-align:right">
+          <div class="sec-score" id="oi-hdr-val" style="color:#c47b1a">0.0</div>
+          <div class="sec-sub">/ 100</div>
+        </div>
+        <span class="sec-arrow" id="arr-oi">›</span>
       </div>
     </div>
-    <div class="section-body" id="body-oi">
+    <div class="sec-body" id="body-oi">
       <div class="grid2">
         <div>
-          <div class="subsec-title">A. Regional Diversity (RD) · 30 pts</div>
-          <div class="field"><label>% Students from Other States</label><div class="field-row"><input type="number" id="rdStates" oninput="calc()" min="0" max="100"><span class="field-unit">%</span></div></div>
-          <div class="field"><label>% Students from Other Countries</label><div class="field-row"><input type="number" id="rdCountries" oninput="calc()" min="0" max="100"><span class="field-unit">%</span></div></div>
-          <div class="subscore"><div class="subscore-header"><span>RD Score</span><span id="rd-val" style="color:#c47b1a">0.00 / 30</span></div><div style="display:flex;align-items:center;gap:10px"><div class="subscore-bar-track"><div class="subscore-bar-fill" id="rd-bar" style="background:#c47b1a;width:0%"></div></div></div></div>
+          <div class="subsec">A. Regional Diversity (RD) · 30 pts</div>
+          <div class="field">
+            <label>% Students from Other States</label>
+            <div class="field-row"><input type="number" id="rdStates" oninput="calc()" min="0" max="100" placeholder="e.g. 20"><span class="unit">%</span></div>
+          </div>
+          <div class="field">
+            <label>% Students from Other Countries</label>
+            <div class="field-row"><input type="number" id="rdCountries" oninput="calc()" min="0" max="100" placeholder="e.g. 2"><span class="unit">%</span></div>
+          </div>
+          <div class="subscore">
+            <div class="ss-hdr"><span>RD Score</span><span id="rd-val" style="color:#c47b1a">0.00 / 30</span></div>
+            <div class="ss-track"><div class="ss-fill" id="rd-bar" style="background:#c47b1a;width:0%"></div></div>
+          </div>
         </div>
         <div>
-          <div class="subsec-title">B. Women Diversity (WD) · 30 pts</div>
-          <div class="field"><label>% Women Students (NWS)</label><div class="field-hint">Expectation: 50% for full marks</div><div class="field-row"><input type="number" id="NWS" oninput="calc()" min="0" max="100"><span class="field-unit">%</span></div></div>
-          <div class="field"><label>% Women Faculty incl. Admin (NWF)</label><div class="field-hint">Expectation: 20% for full marks</div><div class="field-row"><input type="number" id="NWF" oninput="calc()" min="0" max="100"><span class="field-unit">%</span></div></div>
-          <div class="subscore"><div class="subscore-header"><span>WD Score</span><span id="wd-val" style="color:#c47b1a">0.00 / 30</span></div><div style="display:flex;align-items:center;gap:10px"><div class="subscore-bar-track"><div class="subscore-bar-fill" id="wd-bar" style="background:#c47b1a;width:0%"></div></div></div></div>
+          <div class="subsec">B. Women Diversity (WD) · 30 pts</div>
+          <div class="field">
+            <label>% Women Students (NWS)</label>
+            <div class="hint">Expectation: 50% for full marks</div>
+            <div class="field-row"><input type="number" id="NWS" oninput="calc()" min="0" max="100" placeholder="e.g. 45"><span class="unit">%</span></div>
+          </div>
+          <div class="field">
+            <label>% Women Faculty incl. Admin (NWF)</label>
+            <div class="hint">Expectation: 20% for full marks</div>
+            <div class="field-row"><input type="number" id="NWF" oninput="calc()" min="0" max="100" placeholder="e.g. 18"><span class="unit">%</span></div>
+          </div>
+          <div class="subscore">
+            <div class="ss-hdr"><span>WD Score</span><span id="wd-val" style="color:#c47b1a">0.00 / 30</span></div>
+            <div class="ss-track"><div class="ss-fill" id="wd-bar" style="background:#c47b1a;width:0%"></div></div>
+          </div>
         </div>
         <div>
-          <div class="subsec-title">C. Economically &amp; Socially Challenged Students (ESCS) · 20 pts</div>
-          <div class="field"><label>% UG Students with Full Fee Reimbursement (Nesc)</label><div class="field-row"><input type="number" id="Nesc" oninput="calc()" min="0" max="100"><span class="field-unit">%</span></div></div>
-          <div class="subscore"><div class="subscore-header"><span>ESCS Score</span><span id="escs-val" style="color:#c47b1a">0.00 / 20</span></div><div style="display:flex;align-items:center;gap:10px"><div class="subscore-bar-track"><div class="subscore-bar-fill" id="escs-bar" style="background:#c47b1a;width:0%"></div></div></div></div>
+          <div class="subsec">C. Economically &amp; Socially Challenged Students (ESCS) · 20 pts</div>
+          <div class="field">
+            <label>% UG Students with Full Fee Reimbursement (Nesc)</label>
+            <div class="field-row"><input type="number" id="Nesc" oninput="calc()" min="0" max="100" placeholder="e.g. 10"><span class="unit">%</span></div>
+          </div>
+          <div class="subscore">
+            <div class="ss-hdr"><span>ESCS Score</span><span id="escs-val" style="color:#c47b1a">0.00 / 20</span></div>
+            <div class="ss-track"><div class="ss-fill" id="escs-bar" style="background:#c47b1a;width:0%"></div></div>
+          </div>
         </div>
         <div>
-          <div class="subsec-title">D. Facilities for Physically Challenged (PCS) · 20 pts</div>
-          <div class="field"><label>PCS Score (0–20)</label><div class="field-hint">20 = Full facilities provided as outlined by NIRF</div><input type="number" id="PCS" oninput="calc()" min="0" max="20"></div>
-          <div class="subscore"><div class="subscore-header"><span>PCS Score</span><span id="pcs-val" style="color:#c47b1a">0.00 / 20</span></div><div style="display:flex;align-items:center;gap:10px"><div class="subscore-bar-track"><div class="subscore-bar-fill" id="pcs-bar" style="background:#c47b1a;width:0%"></div></div></div></div>
+          <div class="subsec">D. Facilities for Physically Challenged (PCS) · 20 pts</div>
+          <div class="field">
+            <label>PCS Score (0–20)</label>
+            <div class="hint">20 = Full facilities provided as outlined by NIRF</div>
+            <input type="number" id="PCS" oninput="calc()" min="0" max="20" placeholder="e.g. 16">
+          </div>
+          <div class="subscore">
+            <div class="ss-hdr"><span>PCS Score</span><span id="pcs-val" style="color:#c47b1a">0.00 / 20</span></div>
+            <div class="ss-track"><div class="ss-fill" id="pcs-bar" style="background:#c47b1a;width:0%"></div></div>
+          </div>
         </div>
       </div>
-      <div class="total-bar" style="background:#fef3c7;border:1px solid #fde68a"><span class="total-label" style="color:#c47b1a">OI Total</span><span class="total-val" id="oi-total2" style="color:#c47b1a">0.00 / 100</span></div>
+      <div class="total-row">
+        <div class="total-bar" style="background:#fef3c7;border:1px solid #fde68a">
+          <span class="total-label" style="color:#c47b1a">OI Total</span>
+          <span class="total-val" id="oi-total" style="color:#c47b1a">0.00 / 100</span>
+        </div>
+        <button class="reset-btn" onclick="resetSection(['rdStates','rdCountries','NWS','NWF','Nesc','PCS'])">↺ Reset OI</button>
+      </div>
     </div>
   </div>
 
-  <!-- 5. PR -->
+  <!-- ── 5. PR ── -->
   <div class="section">
-    <div class="section-header" onclick="toggle('pr')">
+    <div class="sec-hdr" id="hdr-pr" onclick="toggle('pr')">
       <div style="display:flex;align-items:center">
-        <div class="section-dot" style="background:#b5354a"></div>
-        <div><div class="section-title-text">5. Perception (PR)</div><div class="section-meta">Weight: 10% · Max 100 pts</div></div>
+        <div class="sec-dot" style="background:#b5354a"></div>
+        <div>
+          <div class="sec-title">5. Perception (PR)</div>
+          <div class="sec-meta">Weight: 10% · Max 100 pts</div>
+        </div>
       </div>
       <div style="display:flex;align-items:center;gap:16px">
-        <div style="text-align:right"><div class="section-score-val" id="pr-total" style="color:#b5354a">0.0</div><div class="section-score-sub">/ 100</div></div>
-        <div class="section-arrow" id="arr-pr">›</div>
+        <div style="text-align:right">
+          <div class="sec-score" id="pr-hdr-val" style="color:#b5354a">0.0</div>
+          <div class="sec-sub">/ 100</div>
+        </div>
+        <span class="sec-arrow" id="arr-pr">›</span>
       </div>
     </div>
-    <div class="section-body" id="body-pr">
-      <div class="field"><label>Peer Perception Score (PR)</label><div class="field-hint">Derived from employer &amp; academic peer survey conducted by NIRF. Enter your score out of 100.</div><input type="number" id="PR" oninput="calc()" min="0" max="100"></div>
-      <div class="subscore"><div class="subscore-header"><span>PR Score</span><span id="pr-val" style="color:#b5354a">0.00 / 100</span></div><div style="display:flex;align-items:center;gap:10px"><div class="subscore-bar-track"><div class="subscore-bar-fill" id="pr-bar" style="background:#b5354a;width:0%"></div></div></div></div>
-      <div class="total-bar" style="background:#fde8ec;border:1px solid #f9c0ca"><span class="total-label" style="color:#b5354a">PR Total</span><span class="total-val" id="pr-total2" style="color:#b5354a">0.00 / 100</span></div>
+    <div class="sec-body" id="body-pr">
+      <div class="field">
+        <label>Peer Perception Score (PR)</label>
+        <div class="hint">Derived from employer &amp; academic peer survey conducted by NIRF. Enter your score out of 100.</div>
+        <input type="number" id="PR" oninput="calc()" min="0" max="100" placeholder="e.g. 60">
+      </div>
+      <div class="subscore">
+        <div class="ss-hdr"><span>PR Score</span><span id="pr-val" style="color:#b5354a">0.00 / 100</span></div>
+        <div class="ss-track"><div class="ss-fill" id="pr-bar" style="background:#b5354a;width:0%"></div></div>
+      </div>
+      <div class="total-row">
+        <div class="total-bar" style="background:#fde8ec;border:1px solid #f9c0ca">
+          <span class="total-label" style="color:#b5354a">PR Total</span>
+          <span class="total-val" id="pr-total" style="color:#b5354a">0.00 / 100</span>
+        </div>
+        <button class="reset-btn" onclick="resetSection(['PR'])">↺ Reset PR</button>
+      </div>
     </div>
   </div>
 
   <!-- SUMMARY TABLE -->
   <div class="summary">
-    <div class="summary-head">Score Summary</div>
+    <div class="sum-head">Score Summary</div>
     <table>
-      <thead><tr><th>Parameter</th><th>Raw Score</th><th>Weight</th><th>Weighted Score</th><th>Max Weighted</th></tr></thead>
+      <thead>
+        <tr><th>Parameter</th><th>Raw Score</th><th>Weight</th><th>Weighted Score</th><th>Max</th></tr>
+      </thead>
       <tbody>
-        <tr><td><b>Teaching, Learning &amp; Resources</b></td><td id="st-tlr" style="color:#0d7c6e">0.00</td><td>40%</td><td id="sw-tlr" style="color:#0d7c6e;font-weight:700">0.00</td><td>40</td></tr>
-        <tr><td><b>Research &amp; Professional Practice</b></td><td id="st-rp"  style="color:#2563eb">0.00</td><td>20%</td><td id="sw-rp"  style="color:#2563eb;font-weight:700">0.00</td><td>20</td></tr>
-        <tr><td><b>Graduation Outcomes</b></td>             <td id="st-go"  style="color:#7c3aed">0.00</td><td>20%</td><td id="sw-go"  style="color:#7c3aed;font-weight:700">0.00</td><td>20</td></tr>
-        <tr><td><b>Outreach &amp; Inclusivity</b></td>      <td id="st-oi"  style="color:#c47b1a">0.00</td><td>10%</td><td id="sw-oi"  style="color:#c47b1a;font-weight:700">0.00</td><td>10</td></tr>
-        <tr><td><b>Perception</b></td>                      <td id="st-pr"  style="color:#b5354a">0.00</td><td>10%</td><td id="sw-pr"  style="color:#b5354a;font-weight:700">0.00</td><td>10</td></tr>
-        <tr class="summary-footer"><td colspan="3">FINAL NIRF SCORE</td><td id="st-final" style="color:#4ade80;font-size:18px;font-weight:900">0.00</td><td style="color:#6b7280">100</td></tr>
+        <tr><td><b>Teaching, Learning &amp; Resources</b></td><td id="st-tlr" style="color:#0d7c6e;font-weight:600">0.00</td><td>40%</td><td id="sw-tlr" style="color:#0d7c6e;font-weight:700">0.00</td><td>40</td></tr>
+        <tr><td><b>Research &amp; Professional Practice</b></td><td id="st-rp"  style="color:#2563eb;font-weight:600">0.00</td><td>20%</td><td id="sw-rp"  style="color:#2563eb;font-weight:700">0.00</td><td>20</td></tr>
+        <tr><td><b>Graduation Outcomes</b></td>             <td id="st-go"  style="color:#7c3aed;font-weight:600">0.00</td><td>20%</td><td id="sw-go"  style="color:#7c3aed;font-weight:700">0.00</td><td>20</td></tr>
+        <tr><td><b>Outreach &amp; Inclusivity</b></td>      <td id="st-oi"  style="color:#c47b1a;font-weight:600">0.00</td><td>10%</td><td id="sw-oi"  style="color:#c47b1a;font-weight:700">0.00</td><td>10</td></tr>
+        <tr><td><b>Perception</b></td>                      <td id="st-pr"  style="color:#b5354a;font-weight:600">0.00</td><td>10%</td><td id="sw-pr"  style="color:#b5354a;font-weight:700">0.00</td><td>10</td></tr>
+        <tr class="foot">
+          <td colspan="3">FINAL NIRF SCORE</td>
+          <td id="st-final" style="color:#4ade80;font-size:18px;font-weight:900">0.00</td>
+          <td style="color:#9ca3af">100</td>
+        </tr>
       </tbody>
     </table>
   </div>
 
-  <div class="footer-note">Scores calculated per NIRF 2025 methodology for Architecture &amp; Planning. Internal normalisation functions approximated via log-scale proxies where NIRF does not publish exact formulas.</div>
-</div>
+  <div style="background:#fff3cd;border:2px solid #ffc107;border-radius:10px;padding:20px 24px;margin-top:24px;text-align:center;">
+    <div style="font-size:20px;font-weight:900;color:#b45309;margin-bottom:8px;letter-spacing:0.01em;">⚠️ DISCLAIMER</div>
+    <div style="font-size:17px;font-weight:800;color:#92400e;margin-bottom:10px;">
+      THIS TOOL DOES NOT SAVE, STORE, OR TRANSMIT ANY DATA YOU ENTER.
+    </div>
+    <div style="font-size:14px;font-weight:700;color:#b45309;line-height:1.7;">
+      All calculations are performed entirely within your browser and on your device.<br>
+      No information is collected, recorded, or shared with any server or third party.<br>
+      Once you close or refresh this page, all entered data is permanently lost.
+    </div>
+  </div>
+
+  <div class="footer-note" style="margin-top:16px;">
+    Scores calculated per NIRF 2025 methodology for Architecture &amp; Planning.<br>
+    Internal normalisation functions approximated via log-scale proxies where NIRF does not publish exact formulas.
+  </div>
+
+</div><!-- /container -->
 
 <script>
-function v(id) { return Math.max(parseFloat(document.getElementById(id).value) || 0, 0); }
-function pct(id) { return Math.min(Math.max(parseFloat(document.getElementById(id).value) || 0, 0), 100); }
-function clamp(val, mn, mx) { return Math.min(Math.max(val, mn), mx); }
+function g(id) { return document.getElementById(id); }
+function v(id) { return Math.max(parseFloat(g(id).value) || 0, 0); }
+function p(id) { return Math.min(Math.max(parseFloat(g(id).value) || 0, 0), 100); }
+function clamp(x, a, b) { return Math.min(Math.max(x, a), b); }
+function logScale(x, bench) { return x <= 0 ? 0 : clamp(Math.log10(x + 1) / Math.log10(bench + 1), 0, 1); }
 
 function setSub(id, score, max, color) {
-  document.getElementById(id+'-val').textContent = score.toFixed(2) + ' / ' + max;
-  document.getElementById(id+'-bar').style.width = clamp((score/max)*100, 0, 100) + '%';
+  g(id + '-val').textContent = score.toFixed(2) + ' / ' + max;
+  g(id + '-bar').style.width = clamp((score / max) * 100, 0, 100) + '%';
 }
 
 function toggle(id) {
-  var body = document.getElementById('body-' + id);
-  var hdr  = body.previousElementSibling;
-  var arr  = document.getElementById('arr-' + id);
-  var open = body.classList.toggle('open');
-  hdr.classList.toggle('open', open);
-  arr.style.transform = open ? 'rotate(90deg)' : 'rotate(0deg)';
+  var body = g('body-' + id);
+  var hdr  = g('hdr-' + id);
+  var arr  = g('arr-' + id);
+  var isOpen = body.classList.toggle('open');
+  hdr.classList.toggle('open', isOpen);
+  arr.style.transform = isOpen ? 'rotate(90deg)' : 'rotate(0deg)';
+}
+
+function resetSection(ids) {
+  ids.forEach(function(id) { var el = g(id); if (el) el.value = ''; });
+  calc();
 }
 
 function calc() {
-  var NT = v('NT'), NE = v('NE'), F = v('F');
-  var FRA = pct('FRA'), F1 = pct('F1'), F2 = pct('F2'), F3 = pct('F3');
-  var BC = v('BC'), BO = v('BO');
-  var P = v('P'), FRQ = v('FRQ'), CC = v('CC'), RF = v('RF'), CF = v('CF');
-  var Np = pct('Np'), Nhs = pct('Nhs'), Ng = pct('Ng'), MS = v('MS');
-  var rdS = pct('rdStates'), rdC = pct('rdCountries');
-  var NWS = pct('NWS'), NWF = pct('NWF'), Nesc = pct('Nesc'), PCS = clamp(v('PCS'),0,20);
-  var PR = clamp(v('PR'),0,100);
-
   // TLR
+  var NT = v('NT'), NE = v('NE'), F = v('F');
   var ss  = NT ? clamp(20 * (NE / NT), 0, 20) : 0;
-  var fsr = NT && F ? (F/NT < 1/50 ? 0 : clamp(30 * (15 * F / NT), 0, 30)) : 0;
+  var fsr = (NT && F) ? (F / NT < 1/50 ? 0 : clamp(30 * 15 * (F / NT), 0, 30)) : 0;
+  var FRA = p('FRA');
   var FQ  = FRA >= 95 ? 10 : 10 * (FRA / 95);
-  var FE  = 3*Math.min(3*F1/100,1) + 3*Math.min(3*F2/100,1) + 4*Math.min(3*F3/100,1);
+  var f1  = p('expF1') / 100, f2 = p('expF2') / 100, f3 = p('expF3') / 100;
+  var FE  = 3 * Math.min(3*f1, 1) + 3 * Math.min(3*f2, 1) + 4 * Math.min(3*f3, 1);
   var fqe = clamp(FQ + FE, 0, 20);
-  var b1  = BC <= 0 ? 0 : clamp(Math.log10(BC+1)/Math.log10(50001), 0, 1);
-  var b2  = BO <= 0 ? 0 : clamp(Math.log10(BO+1)/Math.log10(100001), 0, 1);
-  var fru = clamp(7.5*b1 + 22.5*b2, 0, 30);
+  var fru = clamp(7.5 * logScale(v('BC'), 50000) + 22.5 * logScale(v('BO'), 100000), 0, 30);
   var TLR = ss + fsr + fqe + fru;
 
   // RP
-  var pu  = FRQ ? clamp(60 * clamp(Math.log10(P/FRQ+1)/Math.log10(4), 0, 1), 0, 60) : 0;
-  var qp  = P   ? clamp(20 * clamp((CC/P)/10, 0, 1), 0, 20) : 0;
-  var fpr = clamp(10 * (RF<=0?0:clamp(Math.log10(RF+1)/Math.log10(500001),0,1)), 0, 10);
-  var fpc = clamp(10 * (CF<=0?0:clamp(Math.log10(CF+1)/Math.log10(500001),0,1)), 0, 10);
-  var RP  = pu + qp + fpr + fpc;
+  var P = v('P'), FRQ = v('FRQ'), CC = v('CC');
+  var pu   = FRQ ? clamp(60 * clamp(Math.log10(P/FRQ + 1) / Math.log10(4), 0, 1), 0, 60) : 0;
+  var qp   = P   ? clamp(20 * clamp((CC / P) / 10, 0, 1), 0, 20) : 0;
+  var fppp = clamp(10 * logScale(v('RF'), 500000) + 10 * logScale(v('CF'), 500000), 0, 20);
+  var RP   = pu + qp + fppp;
 
   // GO
-  var gph = clamp(40*(Np/100 + Nhs/100), 0, 40);
-  var gue = clamp(30*Math.min(Ng/80, 1), 0, 30);
-  var gms = clamp(30*(MS<=0?0:clamp(Math.log10(MS+1)/Math.log10(800001),0,1)), 0, 30);
+  var gph = clamp(40 * (p('Np')/100 + p('Nhs')/100), 0, 40);
+  var gue = clamp(30 * Math.min(p('Ng') / 80, 1), 0, 30);
+  var gms = clamp(30 * logScale(v('MS'), 800000), 0, 30);
   var GO  = gph + gue + gms;
 
   // OI
-  var rd   = clamp(25*(rdS/100) + 5*(rdC/100), 0, 30);
-  var wd   = clamp(15*(NWS/50) + 15*(NWF/20), 0, 30);
-  var escs = clamp(20*(Nesc/30), 0, 20);
-  var OI   = rd + wd + escs + PCS;
+  var rd   = clamp(25 * p('rdStates')/100 + 5 * p('rdCountries')/100, 0, 30);
+  var wd   = clamp(15 * p('NWS')/50 + 15 * p('NWF')/20, 0, 30);
+  var escs = clamp(20 * p('Nesc')/30, 0, 20);
+  var pcs  = clamp(v('PCS'), 0, 20);
+  var OI   = rd + wd + escs + pcs;
 
-  var FINAL = (TLR*0.40 + RP*0.20 + GO*0.20 + OI*0.10 + PR*0.10).toFixed(2);
-  var fv = parseFloat(FINAL);
-  var gc = fv < 40 ? '#ef4444' : fv < 65 ? '#f59e0b' : fv < 80 ? '#0d7c6e' : '#16a34a';
+  // PR
+  var PR = clamp(v('PR'), 0, 100);
 
-  // Update sub scores
-  setSub('ss', ss, 20); setSub('fsr', fsr, 30); setSub('fqe', fqe, 20); setSub('fru', fru, 30);
-  setSub('pu', pu, 60); setSub('qp', qp, 20); setSub('fppp', fpr+fpc, 20);
+  // FINAL
+  var FINAL = TLR*0.40 + RP*0.20 + GO*0.20 + OI*0.10 + PR*0.10;
+  var gc = FINAL < 40 ? '#ef4444' : FINAL < 65 ? '#f59e0b' : FINAL < 80 ? '#0d7c6e' : '#16a34a';
+
+  // Update sub-score badges
+  setSub('ss',  ss,  20); setSub('fsr', fsr, 30); setSub('fqe', fqe, 20); setSub('fru', fru, 30);
+  setSub('pu',  pu,  60); setSub('qp',  qp,  20); setSub('fppp', fppp, 20);
   setSub('gph', gph, 40); setSub('gue', gue, 30); setSub('gms', gms, 30);
-  setSub('rd', rd, 30); setSub('wd', wd, 30); setSub('escs', escs, 20); setSub('pcs', PCS, 20);
-  setSub('pr', PR, 100);
+  setSub('rd',  rd,  30); setSub('wd',  wd,  30); setSub('escs', escs, 20); setSub('pcs', pcs, 20);
+  setSub('pr',  PR,  100);
 
-  // Section totals
-  ['tlr','rp','go','oi'].forEach(function(id){ document.getElementById(id+'-total').textContent = {tlr:TLR,rp:RP,go:GO,oi:OI}[id].toFixed(1); });
-  document.getElementById('pr-total').textContent = PR.toFixed(1);
-  document.getElementById('tlr-total2').textContent = TLR.toFixed(2) + ' / 100';
-  document.getElementById('rp-total2').textContent  = RP.toFixed(2)  + ' / 100';
-  document.getElementById('go-total2').textContent  = GO.toFixed(2)  + ' / 100';
-  document.getElementById('oi-total2').textContent  = OI.toFixed(2)  + ' / 100';
-  document.getElementById('pr-total2').textContent  = PR.toFixed(2)  + ' / 100';
+  // Section header scores
+  g('tlr-hdr-val').textContent = TLR.toFixed(1);
+  g('rp-hdr-val').textContent  = RP.toFixed(1);
+  g('go-hdr-val').textContent  = GO.toFixed(1);
+  g('oi-hdr-val').textContent  = OI.toFixed(1);
+  g('pr-hdr-val').textContent  = PR.toFixed(1);
+
+  // Section total bars
+  g('tlr-total').textContent = TLR.toFixed(2) + ' / 100';
+  g('rp-total').textContent  = RP.toFixed(2)  + ' / 100';
+  g('go-total').textContent  = GO.toFixed(2)  + ' / 100';
+  g('oi-total').textContent  = OI.toFixed(2)  + ' / 100';
+  g('pr-total').textContent  = PR.toFixed(2)  + ' / 100';
 
   // Summary table
-  document.getElementById('st-tlr').textContent = TLR.toFixed(2);
-  document.getElementById('st-rp').textContent  = RP.toFixed(2);
-  document.getElementById('st-go').textContent  = GO.toFixed(2);
-  document.getElementById('st-oi').textContent  = OI.toFixed(2);
-  document.getElementById('st-pr').textContent  = PR.toFixed(2);
-  document.getElementById('sw-tlr').textContent = (TLR*0.40).toFixed(2);
-  document.getElementById('sw-rp').textContent  = (RP*0.20).toFixed(2);
-  document.getElementById('sw-go').textContent  = (GO*0.20).toFixed(2);
-  document.getElementById('sw-oi').textContent  = (OI*0.10).toFixed(2);
-  document.getElementById('sw-pr').textContent  = (PR*0.10).toFixed(2);
-  document.getElementById('st-final').textContent = FINAL;
+  g('st-tlr').textContent = TLR.toFixed(2); g('sw-tlr').textContent = (TLR*0.40).toFixed(2);
+  g('st-rp').textContent  = RP.toFixed(2);  g('sw-rp').textContent  = (RP*0.20).toFixed(2);
+  g('st-go').textContent  = GO.toFixed(2);  g('sw-go').textContent  = (GO*0.20).toFixed(2);
+  g('st-oi').textContent  = OI.toFixed(2);  g('sw-oi').textContent  = (OI*0.10).toFixed(2);
+  g('st-pr').textContent  = PR.toFixed(2);  g('sw-pr').textContent  = (PR*0.10).toFixed(2);
+  g('st-final').textContent = FINAL.toFixed(2);
 
-  // Top card
-  var fs = document.getElementById('finalScore');
-  fs.textContent = FINAL; fs.style.color = gc;
-  var bars = {tlr:[TLR,40,'#0d7c6e'],rp:[RP,20,'#2563eb'],go:[GO,20,'#7c3aed'],oi:[OI,10,'#c47b1a'],pr:[PR*0.10,10,'#b5354a']};
-  for (var k in bars) {
-    var b = bars[k];
-    document.getElementById('bar-'+k).style.width = clamp((b[0]/100)*100,0,100)+'%';
-    document.getElementById('bv-'+k).textContent = (b[0]*{tlr:0.40,rp:0.20,go:0.20,oi:0.10,pr:1}[k]).toFixed(1);
+  // Top card final score
+  var fs = g('finalScore');
+  fs.textContent = FINAL.toFixed(2);
+  fs.style.color = gc;
+
+  // Top card bars (weighted contribution)
+  var barData = {
+    tlr: [TLR * 0.40, 40, '#0d7c6e'],
+    rp:  [RP  * 0.20, 20, '#2563eb'],
+    go:  [GO  * 0.20, 20, '#7c3aed'],
+    oi:  [OI  * 0.10, 10, '#c47b1a'],
+    pr:  [PR  * 0.10, 10, '#b5354a']
+  };
+  for (var k in barData) {
+    var d = barData[k];
+    g('bar-' + k).style.width = clamp((d[0] / d[1]) * 100, 0, 100) + '%';
+    g('bv-'  + k).textContent = d[0].toFixed(1);
   }
 }
 </script>
